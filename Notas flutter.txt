@@ -1,0 +1,29 @@
+Notas
+
+A main.dart é a principal função do app.
+O app sempre executa ela primeiro.
+Existem duas superclasses em flutter: Statelesswidget e Statefulwidget.
+Qualquer classe deve ser criada apartir delas.
+O Widget build(BuildContext context) é widget construtor.
+O modificador @override sobrescreve métodos, principalmente o build().
+Todo app deve conter o widget MaterialApp.
+Nele contem o titulo do app, o tema e a home.
+O widget Scaffold constroi a tela do app.
+//Em flutter, para alterar o estado de tela do app devemos usar setState.
+//A funçao setState é exclusiva da classe Statefulwidget. 
+//Logo a tela deve ser criada em uma classe extendida de Statefulwidget.
+//criamos uma classe estendida de statefulwidget e nela criamos um estado.
+class MyHomePage extends StatefulWidget { //StatefulWidget é classe pai 
+  State<MyHomePage> createState() => _MyHomePageState(); //cria a classe _myhomepagestate()
+}
+
+O input de  dados no flutter/dart é feita através do TextField ou TextFormField. 
+A captura de dados é feita pelo controller colocado no TextField.
+//o controller deve ser colocado no Textfield para captura de dados.
+  final TextEditingController _controller = TextEditingController();
+
+Para mudar o estado de tela, 
+deve-se criar uma função com setState 
+colocando nela toda a logica de alteração e variaveis de estado. 
+Depois coloca-se esta função em um botão no scaffold, 
+ou use outro recurso para chamar a função no Scaffold.
